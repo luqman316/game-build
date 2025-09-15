@@ -5,8 +5,8 @@ function MainPage() {
   return (
     <>
       <div className="">
-        <Hero/>
         <About/>
+        <Hero/>
       </div>
     </>
   );

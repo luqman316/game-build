@@ -44,13 +44,14 @@ function About() {
 
   return (
     <>
-      <div className="mt-18 mb-18">
+      <div className="mt-36">
         <div className="flex">
           {/* 1st div */}
           <div
-            className="w-full h-[400px] flex flex-col justify-center items-center bg-cover bg-center"
+            className="w-full h-[400px] flex flex-col  justify-center items-center bg-cover bg-center"
             style={{ backgroundImage: "url('/about/img (3).png')" }}
           >
+            <span className="text-white font-extrabold text-xl mb-6">Enter the code to download the build</span>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col items-center gap-4 w-80 bg-white/80 p-6 rounded-lg shadow-lg"
