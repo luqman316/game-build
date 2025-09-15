@@ -2,21 +2,16 @@
 import { useState } from "react";
 
 const SECRET_CODES = [
-  "alpha123",
-  "bravo456",
-  "charlie789",
-  "delta321",
-  "echo654",
-  "foxtrot987",
-  "golf111",
-  "hotel222",
-  "india333",
-  "juliet444",
-  "kilo555",
-  "lima666",
-  "mike777",
-  "november888",
-  "oscar999",
+  "KJ3DR-9L8WP-MZ4XT",
+  "B7Q2V-ZY9HK-6RM1F",
+  "T5L8S-PA7NK-Q2V3M",
+  "V9J6D-4X2FM-L1Q7R",
+  "N8W5H-R3Y2K-7LPZQ",
+  "Q1Z8M-X7T4J-H5L9V",
+  "F4M2K-9J6LQ-P7X1Z",
+  "L2V9N-Q6W4R-Y8T5K",
+  "M7P4F-X1J8L-Q9R6H",
+  "Z5Y7V-K3T1Q-W4M8R",
 ];
 
 function About() {
@@ -27,9 +22,16 @@ function About() {
   const GOOGLE_DRIVE_LINK =
     "https://drive.google.com/uc?export=download&id=143FSv1F8YtmRUHzsIi4dvfqPEmzv1x4S"; // Direct file download link
 
+  // Normalize code: remove dashes/spaces, lowercase
+  const normalize = (str: string) => str.replace(/[-\s]/g, "").toLowerCase();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (SECRET_CODES.includes(input.trim().toLowerCase())) {
+    const normalizedInput = normalize(input);
+    const match = SECRET_CODES.some(
+      (code) => normalize(code) === normalizedInput
+    );
+    if (match) {
       setSuccess(true);
       setError("");
       // Auto-open Google Drive download link
