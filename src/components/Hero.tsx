@@ -4,6 +4,7 @@ function Hero() {
   return (
     <>
       <div className="mt-10 flex flex-col items-center justify-center w-full overflow-hidden text-white font-papyrus">
+        {/* 1st */}
         <section
           className="relative w-full min-h-[300px] sm:min-h-[350px] md:min-h-[399px] flex flex-col items-center justify-center bg-cover bg-center"
           style={{
