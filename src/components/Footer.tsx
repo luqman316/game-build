@@ -16,7 +16,7 @@ function Footer() {
             </div>
           </div>
 
-          <div  className="font-mono text-white">
+          <div className="font-mono text-white">
             <div className="flex flex-col justify-center items-center">
               <h1>SHOPS & MERCH</h1>
               <h1>Privacy Policy</h1>
