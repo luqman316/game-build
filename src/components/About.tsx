@@ -44,35 +44,37 @@ function About() {
 
   return (
     <>
-      <div className="mt-36">
-        <div className="flex">
-          {/* 1st div */}
+      <div className="mt-36 min-h-[500px] flex items-center justify-center">
+        <div className="flex w-full justify-center">
+          {/* Responsive main card */}
           <div
-            className="w-full h-[400px] flex flex-col  justify-center items-center bg-cover bg-center"
+            className="w-full h-[400px] flex flex-col justify-center items-center bg-cover bg-center px-2 sm:px-4 md:px-8 lg:px-0"
             style={{ backgroundImage: "url('/about/img (3).png')" }}
           >
-            <span className="text-white font-extrabold text-xl mb-6">Enter the code to download the build</span>
+            <span className="text-white font-extrabold text-lg sm:text-lg md:text-2xl mb-6 text-center drop-shadow-lg ">
+              Enter the code to download the build
+            </span>
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col items-center gap-4 w-80 bg-white/80 p-6 rounded-lg shadow-lg"
+              className="flex flex-col items-center gap-4 w-full max-w-xs sm:max-w-sm md:max-w-md bg-white/90 p-4 sm:p-6 rounded-lg shadow-lg"
             >
               <input
                 type="text"
                 placeholder="Enter Secret Code"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="w-full px-4 py-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 text-black"
+                className="w-full px-3 py-2 sm:px-4 sm:py-2 rounded border border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 text-black text-base sm:text-lg"
                 autoFocus
               />
               <button
                 type="submit"
-                className="w-full bg-purple-700 text-white px-6 py-2 rounded hover:bg-purple-800 transition font-semibold"
+                className="w-full bg-purple-700 text-white px-4 py-2 sm:px-6 sm:py-2 rounded hover:bg-purple-800 transition font-semibold text-base sm:text-lg"
               >
                 Submit
               </button>
             </form>
             {success && (
-              <div className="mt-6 text-center text-green-200 font-semibold">
+              <div className="mt-6 text-center text-green-200 font-semibold text-sm sm:text-base">
                 The download has started! If it doesn’t, then{" "}
                 <a
                   href={GOOGLE_DRIVE_LINK}
@@ -86,7 +88,9 @@ function About() {
               </div>
             )}
             {error && !success && (
-              <div className="mt-4 text-red-200">{error}</div>
+              <div className="mt-4 text-red-200 text-sm sm:text-base">
+                {error}
+              </div>
             )}
           </div>
         </div>
