@@ -44,7 +44,7 @@ function About() {
 
   return (
     <>
-      <div className="mt-36 min-h-[500px] flex items-center justify-center font-papyrus  ">
+      <div className=" min-h-[500px] flex items-center justify-center font-papyrus  ">
         <div className="flex w-full justify-center">
           {/* Responsive main card */}
           <div
