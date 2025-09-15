@@ -44,12 +44,12 @@ function About() {
 
   return (
     <>
-      <div className="mt-36 min-h-[500px] flex items-center justify-center">
+      <div className="mt-36 min-h-[500px] flex items-center justify-center font-papyrus  ">
         <div className="flex w-full justify-center">
           {/* Responsive main card */}
           <div
-            className="w-full h-[400px] flex flex-col justify-center items-center bg-cover bg-center px-2 sm:px-4 md:px-8 lg:px-0"
-            style={{ backgroundImage: "url('/about/img (3).png')" }}
+            className="w-full h-[400px] flex flex-col justify-center items-center bg-gray-500/50 bg-cover bg-center px-2 sm:px-4 md:px-8 lg:px-0"
+            // style={{ backgroundImage: "url('/about/img (3).png')" }}
           >
             <span className="text-white font-extrabold text-lg sm:text-lg md:text-2xl mb-6 text-center drop-shadow-lg ">
               Enter the code to download the build

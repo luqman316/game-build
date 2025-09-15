@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       {/* fixed top-0 left-0 w-full z-50 */}
-      <div className="bg-black fixed top-0 left-0 w-full z-50 ">
+      <div className="bg-black fixed top-0 left-0 w-full z-50 font-papyrus ">
         <div className="container mx-auto">
           {/* 1st div for images */}
           <div className=" mx-16 flex justify-between items-center">
