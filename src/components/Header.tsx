@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Header() {
   return (
     <>
       {/* fixed top-0 left-0 w-full z-50 */}
-      <div className="bg-black fixed top-0 left-0 w-full z-50 font-papyrus ">
+      <div className="bg-black font-papyrus ">
         <div className="container mx-auto">
           {/* 1st div for images */}
           <div className=" mx-16 flex justify-between items-center">
@@ -33,6 +34,7 @@ function Header() {
                 height={100}
                 // className="flex justify-evenly"
               /> */}
+              <Link className="text-white p-3" href={'/admin'}>Codes</Link>
             </div>
           </div>
           {/* <br />
